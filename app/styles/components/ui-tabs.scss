@@ -1,0 +1,53 @@
+.tab {
+    &-wrapper {
+        clear: both;
+        list-style: none;
+        margin: 0 0 20px;
+        overflow: hidden;
+        padding: 0;
+
+        &--2 {
+            .tab-link {
+                width: 50%;
+            }
+        }
+
+        &--3 {
+            .tab-link {
+                width: 33.333333%;
+            }
+        }
+    }
+
+    &-link {
+        background-color: $secondary-9;
+        display: block;
+        float: left;
+        height: 50px;
+        padding: 16px;
+    }
+
+    &-active {
+        .tab-link {
+            background-color: $primary-3;
+            color: $primary-1;
+            cursor: text;
+            text-decoration: none;
+        }
+
+        .tab-content {
+            clear: right;
+            float: right;
+            margin-left: -100%;
+            position: static;
+            width: 100%;
+        }
+    }
+
+    &-content {
+        left: -999em;
+        margin: 50px 0 0;
+        padding: 16px;
+        position: absolute;
+    }
+}

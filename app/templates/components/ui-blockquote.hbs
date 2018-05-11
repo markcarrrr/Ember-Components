@@ -1,0 +1,15 @@
+<blockquote>
+    <p>{{quote}}</p>
+
+    {{#if cite}}
+        <footer>
+            <cite>
+                {{#if citeLink}}
+                    <a href={{citeLink}}>{{cite}}</a>
+                {{else}}
+                    {{cite}}
+                {{/if}}
+            </cite>
+        </footer>
+    {{/if}}
+</blockquote>

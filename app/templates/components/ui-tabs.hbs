@@ -1,0 +1,9 @@
+<ul class="tab-wrapper tab-wrapper--{{tabItems.length}}">
+    {{#each tabItems as |tabItem index|}}
+        <li class="tab-item {{unless index 'tab-active'}}">
+            
+            <a href="#" class="tab-link" onclick={{action 'setTab'}}>{{tabItem.title}}</a>
+            <div class="tab-content">{{tabItem.content}}</div>
+        </li>
+    {{/each}}
+</ul>

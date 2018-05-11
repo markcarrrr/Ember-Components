@@ -7,6 +7,8 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('ui-tabs');
+  this.route('ui-blockquote');
 });
 
 export default Router;

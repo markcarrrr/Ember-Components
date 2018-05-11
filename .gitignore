@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /tmp
+app/style/app.css
 
 # dependencies
 /node_modules
