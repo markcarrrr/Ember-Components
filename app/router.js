@@ -9,6 +9,7 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('ui-tabs');
   this.route('ui-blockquote');
+  this.route('ui-datepicker');
 });
 
 export default Router;

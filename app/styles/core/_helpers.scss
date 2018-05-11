@@ -1,0 +1,12 @@
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    clip: rect(1px,1px,1px,1px);
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}

@@ -1,0 +1,21 @@
+<div class="datepicker-wrapper">
+    <label class="datepicker-label">
+        <span class="datepicker-label-text {{if hideLabel 'visually-hidden' ''}}">
+            {{#if labelText}}
+                {{labelText}}
+            {{else}}
+                Choose a date
+            {{/if}}
+        </span>
+
+        {{!-- Ember addon, see: https://github.com/shipshapecode/ember-flatpickr --}}
+        {{ember-flatpickr
+            altInput=true
+            altFormat='F j, Y'
+            dateFormat='Y-m-d'
+            date=(if date date (readonly null))
+            minDate='today'
+            onChange=(if onChange onChange (action (mut dateValues)))
+        }}
+    </label>
+</div>
