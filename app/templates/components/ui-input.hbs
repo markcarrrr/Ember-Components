@@ -1,0 +1,19 @@
+{{!-- 
+    Options/values:
+        - labelText=string          // Set label text (required).
+        - hideLabel=true            // Accessibly hides the label text.
+        - required=true             // Set label text and input to show as being required.
+--}}
+<label>
+    <span class="label-text {{if hideLabel 'visually-hidden' ''}}">
+        {{labelText}}
+
+        {{#if required}}
+            <abbr title="required" class="icon icon-required">*</abbr>
+        {{/if}}
+    </span>
+
+    {{yield (hash
+        required=required
+    )}}
+</label>

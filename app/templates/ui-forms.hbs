@@ -1,0 +1,17 @@
+{{#ui-form}}
+    {{#ui-fieldset setLegend="Full name"}}
+        {{#ui-input labelText="First Name" hideLabel=true required=true as |options|}}
+            {{input  required=options.required placeholder="First Name"}}
+        {{/ui-input}}
+
+        {{#ui-input labelText="Last Name" hideLabel=true required=false as |options|}}
+            {{input required=options.required placeholder="Last Name"}}
+        {{/ui-input}}
+    {{/ui-fieldset}}
+
+    {{#ui-input labelText="Age"}}
+        {{input type="number" min="18" max="65"}}
+    {{/ui-input}}
+
+    {{ui-button buttonText="Submit" type="submit"}}
+{{/ui-form}}

@@ -1,0 +1,11 @@
+{{!-- 
+    Options/values:
+        - buttonText=string         // Pass in button text (required).
+        - type=string               // Set button type.
+        - supportingText=string     // Pass in supporting text.
+--}}
+<button type={{type}}>{{buttonText}}</button>
+
+{{#if supportingText}}
+    <p>{{supportingText}}</p>
+{{/if}}

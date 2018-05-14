@@ -1,6 +1,35 @@
-input {
-    border: 2px solid $primary-1;
-    color: $primary-1;
-    font-family: $font-stack-1;
-    padding: 6px 10px;
+fieldset {
+    border: 0;
+    padding: 0;
+
+    .form-field {
+        display: inline-block;
+    }
+}
+
+.form-field {
+    margin: 0 0 20px;
+}
+
+.label-text,
+.legend-text {
+    width: 120px;
+}
+
+.label-text {
+    display: inline-block;
+}
+
+.legend-text {
+    float: left;
+    margin: 6px 3px 0 0;
+}
+
+.form-vertical {
+    .label-text,
+    .legend-text {
+        display: block;
+        margin: 0 0 5px;
+        width: auto;
+    }
 }
