@@ -1,17 +1,13 @@
 {{#ui-form}}
     {{#ui-fieldset setLegend="Full name"}}
-        {{#ui-input labelText="First Name" hideLabel=true required=true as |options|}}
-            {{input  required=options.required placeholder="First Name"}}
-        {{/ui-input}}
+        {{ui-input required=true placeholder="First Name" labelText="First Name" hideLabel=true}}
 
-        {{#ui-input labelText="Last Name" hideLabel=true required=false as |options|}}
-            {{input required=options.required placeholder="Last Name"}}
-        {{/ui-input}}
+        {{ui-input required=true placeholder="Last Name" labelText="Last Name" hideLabel=true}}
     {{/ui-fieldset}}
 
-    {{#ui-input labelText="Age"}}
-        {{input type="number" min="18" max="65"}}
-    {{/ui-input}}
+    {{ui-input type="number" min="18" max="65" labelText="Age"}}
+
+    {{ui-input type="checkbox" labelText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}}
 
     {{ui-button buttonText="Submit" type="submit"}}
 {{/ui-form}}

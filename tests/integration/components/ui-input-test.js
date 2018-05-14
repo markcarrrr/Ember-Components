@@ -13,14 +13,5 @@ module('Integration | Component | ui-input', function(hooks) {
     await render(hbs`{{ui-input}}`);
 
     assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#ui-input}}
-        template block text
-      {{/ui-input}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

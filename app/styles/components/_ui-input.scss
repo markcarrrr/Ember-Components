@@ -1,6 +1,51 @@
+/*
+* Share 'verticalLabel' mixin with legend tag styling for consitency, see file _ui-fieldset.scss.
+*/
+@mixin verticalLabel() {
+    display: block;
+    margin: 0 0 5px;
+    width: auto;
+};
+
+.form-field {
+    margin: 0 0 20px;
+    
+    @include clearFloat;
+}
+
 input {
-    border: 2px solid $primary-1;
+    border: 2px solid $secondary-9;
     color: $primary-1;
     font-family: $font-stack-1;
     padding: 6px 10px;
+}
+
+.label-text {
+    width: $horizontalFormLabelWidth;
+}
+
+.label-text {
+    float: left;
+}
+
+.form-field--checkbox {
+    margin-left: $horizontalFormLabelWidth;
+    position: relative;
+
+    .label-text {
+        margin-left: 25px;
+        width: auto;
+    }
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.form-vertical {
+    .label-text {
+        @include verticalLabel;
+    }
 }

@@ -1,11 +1,13 @@
 {{!-- 
-    Options/values:
+    All {{input}} helper options are available as well as the custom options specified below.
+
+    Custom options/values:
         - labelText=string          // Set label text (required).
+        - labelTextAfter=true       // Set the label text to be placed after the input.
         - hideLabel=true            // Accessibly hides the label text.
-        - required=true             // Set label text and input to show as being required.
 --}}
 <label>
-    <span class="label-text {{if hideLabel 'visually-hidden' ''}}">
+    <span class="label-text {{if hideLabel 'visually-hidden' ''}} {{if labelTextAfter 'label-text--after' ''}}">
         {{labelText}}
 
         {{#if required}}
@@ -13,7 +15,36 @@
         {{/if}}
     </span>
 
-    {{yield (hash
+    {{input
+        accept=accept
+        autocomplete=autocomplete
+        autofocus=autofocus
+        autosave=autosave
+        disabled=disabled
+        form=form
+        formaction=formaction
+        formenctype=formenctype
+        formmethod=formmethod
+        formnovalidate=formnovalidate
+        formtarget=formtarget
+        height=height
+        inputmode=inputmode
+        max=max
+        maxlength=maxlength
+        min=min
+        multiple=multiple
+        name=name
+        pattern=pattern
+        placeholder=placeholder
         required=required
-    )}}
+        readonly=readonly
+        selectionDirection=selectionDirection
+        size=size
+        spellcheck=spellcheck
+        step=step
+        tabindex=tabindex
+        type=type
+        value=value
+        width=width
+    }}
 </label>

@@ -1,0 +1,25 @@
+fieldset {
+    border: 0;
+    padding: 0;
+
+    .form-field {
+        float: left;
+
+        + .form-field {
+            margin-left: 10px;
+        }
+    }
+}
+
+.legend-text {
+    @extend .label-text;
+
+    float: left;
+    padding: 6px 20px 0 0;
+}
+
+.form-vertical {
+    .legend-text {
+        @include verticalLabel;
+    }
+}

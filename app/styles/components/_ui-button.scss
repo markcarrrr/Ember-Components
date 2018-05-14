@@ -1,0 +1,30 @@
+.button-wrapper {
+    margin: $wrapperSpacing;
+}
+
+button {
+    background-color: $secondary-2;
+    border: 0;
+    border-radius: 0;
+    color: $primary-3;
+    cursor: pointer;
+    font-family: $font-stack-1;
+    padding: 10px 16px;
+
+    &:hover,
+    &:focus {
+        background-color: $secondary-1;
+    }
+}
+
+.form-wrapper {
+    .button-wrapper {
+        margin-left: $horizontalFormLabelWidth;
+    }
+}
+
+.form-vertical {
+    .button-wrapper {
+        margin-left: 0;
+    }
+}
