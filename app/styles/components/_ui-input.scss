@@ -8,11 +8,15 @@
 };
 
 @mixin inputStyles() {
-    border: 2px solid $secondary-9;
+    border: 2px solid $secondary-5;
     color: $primary-1;
     font-family: $font-stack-1;
     padding: 6px 10px;
     min-height: 34px;
+
+    &:disabled {
+        border-color: $secondary-9;
+    }
 }
 
 .form-field {

@@ -1,0 +1,20 @@
+{{!-- 
+    Custom options/values:
+        - labelText=string          // Set label text (required).
+        - hideLabel=true            // Accessibly hides the label text.
+--}}
+<label>
+    <span class="label-text {{if hideLabel 'visually-hidden' ''}}">
+        {{labelText}}
+
+        {{#if required}}
+            <abbr title="required" class="icon icon-required">*</abbr>
+        {{/if}}
+    </span>
+
+    <select>
+        {{#each options as |option|}}
+            <option value={{option.value}}>{{option.text}}</option>
+        {{/each}}
+    </select>
+</label>

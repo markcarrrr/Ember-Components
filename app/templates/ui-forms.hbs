@@ -18,6 +18,16 @@
 <code>&lcub;&lcub;&#x75;&#x69;&#x2D;&#x69;&#x6E;&#x70;&#x75;&#x74;&rcub;&rcub;</code>
 </pre>
 
+<h3>Select</h3>
+<pre class="code">
+<code>&lcub;&lcub;&#x75;&#x69;&#x2D;&#x73;&#x65;&#x6C;&#x65;&#x63;&#x74;&rcub;&rcub;</code>
+</pre>
+
+<h3>Textarea</h3>
+<pre class="code">
+<code>&lcub;&lcub;&#x75;&#x69;&#x2D;&#x74;&#x65;&#x78;&#x74;&#x61;&#x72;&#x65;&#x61;&rcub;&rcub;</code>
+</pre>
+
 <h3>Button</h3>
 <pre class="code">
 <code>&lcub;&lcub;&#x75;&#x69;&#x2D;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&rcub;&rcub;</code>
@@ -35,6 +45,8 @@
 
         {{ui-input placeholder="Text input 2" labelText="Text input 2" hideLabel=true}}
     {{/ui-fieldset}}
+
+    {{ui-input disabled=true labelText="Disabled input example"}}
 
     {{ui-input type="color" labelText="Color input example"}}
 
@@ -61,6 +73,8 @@
     {{ui-input type="url" labelText="URL input example"}}
 
     {{ui-input type="week" labelText="Week input example"}}
+
+    {{ui-select labelText="Select dropdown example" setOptions='[{"text": "Option 1", "value": 1}, {"text": "Option 2", "value": 2}, {"text": "Option 3", "value": 3}]'}}
 
     {{ui-input type="checkbox" labelText="Single checkbox example - lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}}
 
