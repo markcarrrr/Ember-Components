@@ -1,6 +1,4 @@
-textarea {
-    @include inputStyles;
-
+textarea.form-input {
     min-height: 120px;
 }
 
