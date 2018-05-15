@@ -27,16 +27,58 @@
 
 <h2>Examples</h2>
 
-{{#ui-form}}
-    {{#ui-fieldset legendText="Full name"}}
-        {{ui-input required=true placeholder="First Name" labelText="First Name" hideLabel=true}}
+{{#ui-form required=true}}
+    {{ui-input required=true placeholder="Text input" labelText="Single input example"}}
 
-        {{ui-input required=true placeholder="Last Name" labelText="Last Name" hideLabel=true}}
+    {{#ui-fieldset legendText="Input group example" required=true}}
+        {{ui-input placeholder="Text input 1" labelText="Text input 1" hideLabel=true}}
+
+        {{ui-input placeholder="Text input 2" labelText="Text input 2" hideLabel=true}}
     {{/ui-fieldset}}
 
-    {{ui-input type="number" min="18" max="65" labelText="Age"}}
+    {{ui-input type="color" labelText="Color input example"}}
 
-    {{ui-input type="checkbox" labelText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}}
+    {{ui-input type="date" labelText="Date input example"}}
+
+    {{ui-input type="email" labelText="Email input example"}}
+
+    {{ui-input type="file" labelText="File input example"}}
+
+    {{ui-input type="month" labelText="Month input example"}}
+
+    {{ui-input type="number" min="0" max="100" labelText="Number input example"}}
+
+    {{ui-input type="password" labelText="Password input example"}}
+
+    {{ui-input type="range" labelText="Range input example"}}
+
+    {{ui-input type="search" labelText="Search input example"}}
+
+    {{ui-input type="tel" labelText="Telephone input example"}}
+
+    {{ui-input type="time" labelText="Time input example"}}
+
+    {{ui-input type="url" labelText="URL input example"}}
+
+    {{ui-input type="week" labelText="Week input example"}}
+
+    {{ui-input type="checkbox" labelText="Single checkbox example - lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}}
+
+    {{#ui-fieldset legendText="Default checkbox group"}}
+        {{ui-input type="checkbox" name="checkboxGroup1" labelText="Checkbox 1"}}
+
+        {{ui-input type="checkbox" name="checkboxGroup1" labelText="Checkbox 2"}}
+
+        {{ui-input type="checkbox" name="checkboxGroup1" labelText="Checkbox 3"}}
+    {{/ui-fieldset}}
+
+    {{#ui-fieldset legendText="Checkbox group set to vertical layout" isVertical=true}}
+        {{ui-input type="checkbox" name="checkboxGroup1" labelText="Checkbox 1"}}
+
+        {{ui-input type="checkbox" name="checkboxGroup1" labelText="Checkbox 2"}}
+
+        {{ui-input type="checkbox" name="checkboxGroup1" labelText="Checkbox 3"}}
+    {{/ui-fieldset}}
 
     {{#ui-fieldset legendText="Default radio group"}}
         {{ui-input type="radio" name="radioGroup1" labelText="Radio 1"}}
@@ -53,6 +95,8 @@
 
         {{ui-input type="radio" name="radioGroup2" labelText="Radio 3"}}
     {{/ui-fieldset}}
+
+    {{ui-textarea labelText="Message"}}
 
     {{ui-button buttonText="Submit" type="submit"}}
 {{/ui-form}}

@@ -7,6 +7,14 @@
     width: auto;
 };
 
+@mixin inputStyles() {
+    border: 2px solid $secondary-9;
+    color: $primary-1;
+    font-family: $font-stack-1;
+    padding: 6px 10px;
+    min-height: 34px;
+}
+
 .form-field {
     margin: 0 0 20px;
     
@@ -14,16 +22,17 @@
 }
 
 input {
-    border: 2px solid $secondary-9;
-    color: $primary-1;
-    font-family: $font-stack-1;
-    padding: 6px 10px;
+    @include inputStyles;
 }
 
 .label-text {
     float: left;
     padding: 6px 20px 0 0;
     width: $horizontalFormLabelWidth;
+}
+
+.form-field-wrapper {
+    overflow: hidden;
 }
 
 .form-field--checkbox,
@@ -39,7 +48,7 @@ input {
     input {
         position: absolute;
         top: 6px;
-        left: 0;
+        left: 1px;
     }
 }
 

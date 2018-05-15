@@ -3,11 +3,10 @@
 
     Custom options/values:
         - labelText=string          // Set label text (required).
-        - labelTextAfter=true       // Set the label text to be placed after the input.
         - hideLabel=true            // Accessibly hides the label text.
 --}}
 <label>
-    <span class="label-text {{if hideLabel 'visually-hidden' ''}} {{if labelTextAfter 'label-text--after' ''}}">
+    <span class="label-text {{if hideLabel 'visually-hidden' ''}}">
         {{labelText}}
 
         {{#if required}}

@@ -3,7 +3,15 @@
         - legendText=string          // Set the legend text.
 --}}
 {{#if legendText}}
-    <legend class="legend-text">{{legendText}}</legend>
+    <legend class="legend-text">
+        {{legendText}}
+        
+        {{#if required}}
+            <abbr title="required" class="icon icon-required">*</abbr>
+        {{/if}}
+    </legend>
 {{/if}}
 
-{{yield}}
+<div class="form-field-wrapper">
+    {{yield}}
+</div>
