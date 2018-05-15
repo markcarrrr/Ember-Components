@@ -1,0 +1,15 @@
+textarea {
+    @include inputStyles;
+
+    min-height: 120px;
+}
+
+.form-field--textarea {
+    label {
+        display: flex;
+    }
+
+    textarea {
+        flex: 1;
+    }
+}

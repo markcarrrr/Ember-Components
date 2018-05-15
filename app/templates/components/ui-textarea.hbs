@@ -1,0 +1,36 @@
+{{!-- 
+    All {{textarea}} helper options are available as well as the custom options specified below.
+
+    Custom options/values:
+        - labelText=string          // Set label text (required).
+        - hideLabel=true            // Accessibly hides the label text.
+--}}
+<label>
+    <span class="label-text {{if hideLabel 'visually-hidden' ''}}">
+        {{labelText}}
+
+        {{#if required}}
+            <abbr title="required" class="icon icon-required">*</abbr>
+        {{/if}}
+    </span>
+
+    {{textarea
+        autofocus=autofocus
+        cols=cols
+        disabled=disabled
+        form=form
+        maxlength=maxlength
+        name=name
+        placeholder=placeholder
+        readonly=readonly
+        required=required
+        rows=(if rows rows 6)
+        selectionDirection=selectionDirection
+        selectionEnd=selectionEnd
+        selectionStart=selectionStart
+        spellcheck=spellcheck
+        tabindex=tabindex
+        value=value
+        wrap=wrap
+    }}
+</label>
