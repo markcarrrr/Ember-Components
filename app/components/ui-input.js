@@ -11,16 +11,14 @@ export default Component.extend({
     init() {
         this._super(...arguments);
 
-        if (!this.parentView) {
+        const parentView = this.parentView;
+
+        if (!parentView || parentView.tagName !== 'fieldset' || this.get('required') === false) {
             return false;
         }
 
-        const attrs = this.parentView.attrs;
+        const attrs = parentView.attrs;
         const required = attrs.required;
-
-        if (this.get('required') === false) {
-            return false;
-        }
 
         if (attrs && attrs.required) {
             this.set('required', required);
