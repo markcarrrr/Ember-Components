@@ -1,5 +1,6 @@
 fieldset {
     border: 0;
+    margin: 0;
     padding: 0;
 
     .form-field {
@@ -13,9 +14,37 @@ fieldset {
 
 .legend-text {
     @extend .label-text;
+}
 
-    float: left;
-    padding: 6px 20px 0 0;
+.legend-text {
+    + .form-field--radio {
+        margin-left: 0;
+    }
+}
+
+.fieldset-vertical {
+    .legend-text {
+        float: none;
+        margin: 0 0 5px $horizontalFormLabelWidth;
+        padding: 0;
+        width: auto;
+
+        + .form-field--radio {
+            margin-left: $horizontalFormLabelWidth;
+        }
+    }
+
+    .form-field {
+        float: none;
+    }
+
+    .form-field--checkbox,
+    .form-field--radio {
+        + .form-field--checkbox,
+        + .form-field--radio {
+            margin-left: $horizontalFormLabelWidth;
+        }
+    }
 }
 
 .form-vertical {

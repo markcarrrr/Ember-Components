@@ -1,5 +1,9 @@
-{{#if setLegend}}
-    <legend class="legend-text">{{setLegend}}</legend>
+{{!-- 
+    Custom options/values:
+        - legendText=string          // Set the legend text.
+--}}
+{{#if legendText}}
+    <legend class="legend-text">{{legendText}}</legend>
 {{/if}}
 
 {{yield}}

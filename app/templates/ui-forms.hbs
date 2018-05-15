@@ -1,5 +1,5 @@
 {{#ui-form}}
-    {{#ui-fieldset setLegend="Full name"}}
+    {{#ui-fieldset legendText="Full name"}}
         {{ui-input required=true placeholder="First Name" labelText="First Name" hideLabel=true}}
 
         {{ui-input required=true placeholder="Last Name" labelText="Last Name" hideLabel=true}}
@@ -8,6 +8,22 @@
     {{ui-input type="number" min="18" max="65" labelText="Age"}}
 
     {{ui-input type="checkbox" labelText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}}
+
+    {{#ui-fieldset legendText="Default radio group"}}
+        {{ui-input type="radio" name="radioGroup1" labelText="Radio 1"}}
+
+        {{ui-input type="radio" name="radioGroup1" labelText="Radio 2"}}
+
+        {{ui-input type="radio" name="radioGroup1" labelText="Radio 3"}}
+    {{/ui-fieldset}}
+
+    {{#ui-fieldset legendText="Radio group set to vertical layout" isVertical=true}}
+        {{ui-input type="radio" name="radioGroup2" labelText="Radio 1"}}
+
+        {{ui-input type="radio" name="radioGroup2" labelText="Radio 2"}}
+
+        {{ui-input type="radio" name="radioGroup2" labelText="Radio 3"}}
+    {{/ui-fieldset}}
 
     {{ui-button buttonText="Submit" type="submit"}}
 {{/ui-form}}

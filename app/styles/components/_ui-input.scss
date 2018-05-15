@@ -21,26 +21,32 @@ input {
 }
 
 .label-text {
+    float: left;
+    padding: 6px 20px 0 0;
     width: $horizontalFormLabelWidth;
 }
 
-.label-text {
-    float: left;
-}
-
-.form-field--checkbox {
+.form-field--checkbox,
+.form-field--radio {
     margin-left: $horizontalFormLabelWidth;
     position: relative;
 
     .label-text {
-        margin-left: 25px;
+        padding-left: 25px;
         width: auto;
     }
 
     input {
         position: absolute;
-        top: 0;
+        top: 6px;
         left: 0;
+    }
+}
+
+.form-field--radio {
+    .label-text {
+        padding-left: 23px;
+        padding-right: 20px;
     }
 }
 

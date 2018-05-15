@@ -12,3 +12,9 @@ body {
 a {
     color: $primary-2;
 }
+
+hr {
+    border: 0;
+    border-top: 2px solid $secondary-5;
+    margin: 80px 0;
+}

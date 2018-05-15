@@ -8,18 +8,28 @@
         list-style: none;
         margin: 0;
         padding: 0;
+
+        @include clearFloat();
     }
     
     &-item {
-        display: inline-block;
+        float: left;
     }
 
     &-link {
         color: $primary-3;
         display: block;
         padding: 20px;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            background-color: $secondary-1;
+        }
 
         &.active {
+            background-color: $primary-3;
+            color: $primary-1;
             cursor: text;
             text-decoration: none;
         }
