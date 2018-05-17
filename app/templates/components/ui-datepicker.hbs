@@ -1,22 +1,26 @@
-<label class="datepicker-label">
-    <span class="datepicker-label-text {{if hideLabel 'visually-hidden' ''}}">
+<label>
+    <span class="label-text {{if hideLabel 'visually-hidden' ''}}">
         {{#if labelText}}
             {{labelText}}
         {{else}}
             Choose a date
+        {{/if}}
+
+        {{#if required}}
+            <abbr title="required" class="icon icon-required">*</abbr>
         {{/if}}
     </span>
 
     {{!-- Ember addon, see: https://github.com/shipshapecode/ember-flatpickr --}}
     {{ember-flatpickr
         allowInput=allowInput
-        altFormat=(if altFormat altFormat 'F j, Y')
+        altFormat=(if altFormat altFormat "F j, Y")
         altInput=setAltInput
-        altInputClass=altInputClass
-        class="form-input"
+        altInputClass="form-input"
+        class="form-datepicker"
         clickOpens=setClickOpens
         date=(if date date (readonly null))
-        dateFormat=(if dateFormat dateFormat 'Y-m-d')
+        dateFormat=(if dateFormat dateFormat "Y-m-d")
         defaultDate=defaultDate
         defaultHour=(if defaultHour defaultHour 12)
         defaultMinute=(if defaultMinute defaultMinute 0)
@@ -28,24 +32,23 @@
         flatpickrRef=flatpickrRef
         hourIncrement=1
         inline=inline
-        locale=(if locale locale 'en')
+        locale=(if locale locale "en")
         maxDate=maxDate 
-        minDate=(if minDate minDate 'today')
+        minDate=(if minDate minDate "today")
         minuteIncrement=(if minuteIncrement minuteIncrement 5)
-        mode=(if mode mode 'single')
-        nextArrow=(if nextArrow nextArrow '>')
+        mode=(if mode mode "single")
+        nextArrow=(if nextArrow nextArrow ">")
         noCalendar=noCalendar
         onChange=(if onChange onChange (action (mut dateValues)))
         onClose=onClose
         onOpen=onOpen
         onReady=onReady
         parseDate=parseDate
-        placeholder=(if placeholder placeholder 'Choose a Date')
-        prevArrow=(if prevArrow prevArrow '<')
+        placeholder=(if placeholder placeholder "Choose a Date")
+        prevArrow=(if prevArrow prevArrow "<")
         shorthandCurrentMonth=shorthandCurrentMonth
         static=static
         time_24hr=time_24hr
         weekNumbers=faweekNumberslse
-        wrap=wrap
     }}
 </label>

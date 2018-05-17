@@ -1,0 +1,112 @@
+<h2>Usage</h2>
+<h3>Form wrapper</h3>
+<pre class="code">
+<code>&lcub;&lcub;&num;&#x75;&#x69;&#x2D;&#x66;&#x6F;&#x72;&#x6D;&rcub;&rcub;&period;&period;&period;&lcub;&lcub;&sol;&#x75;&#x69;&#x2D;&#x66;&#x6F;&#x72;&#x6D;&rcub;&rcub;</code>
+</pre>
+
+<h3>Fieldset wrapper</h3>
+<pre class="code">
+<code>&lcub;&lcub;&num;&#x75;&#x69;&#x2D;&#x66;&#x69;&#x65;&#x6C;&#x64;&#x73;&#x65;&#x74;&rcub;&rcub;&period;&period;&period;&lcub;&lcub;&sol;&#x75;&#x69;&#x2D;&#x66;&#x69;&#x65;&#x6C;&#x64;&#x73;&#x65;&#x74;&rcub;&rcub;</code>
+</pre>
+
+<h3>Input</h3>
+<pre class="code">
+<code>&lcub;&lcub;&#x75;&#x69;&#x2D;&#x69;&#x6E;&#x70;&#x75;&#x74;&rcub;&rcub;</code>
+</pre>
+
+<h3>Select</h3>
+<pre class="code">
+<code>&lcub;&lcub;&#x75;&#x69;&#x2D;&#x73;&#x65;&#x6C;&#x65;&#x63;&#x74;&rcub;&rcub;</code>
+</pre>
+
+<h3>Textarea</h3>
+<pre class="code">
+<code>&lcub;&lcub;&#x75;&#x69;&#x2D;&#x74;&#x65;&#x78;&#x74;&#x61;&#x72;&#x65;&#x61;&rcub;&rcub;</code>
+</pre>
+
+<h3>Button</h3>
+<pre class="code">
+<code>&lcub;&lcub;&#x75;&#x69;&#x2D;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&rcub;&rcub;</code>
+</pre>
+
+<hr>
+
+<h2>Examples</h2>
+
+{{#ui-form required=true as |form|}}
+    {{form.input required=true labelText="Single input"}}
+
+    {{#form.fieldset legendText="Input group" required=true}}
+        {{form.input labelText="Text input 1" hideLabel=true}}
+
+        {{form.input labelText="Text input 2" hideLabel=true}}
+    {{/form.fieldset}}
+
+    {{form.input disabled=true labelText="Disabled input"}}
+
+    {{form.input type="color" labelText="Color input"}}
+
+    {{form.input type="date" labelText="Date input"}}
+
+    {{form.input type="email" labelText="Email input"}}
+
+    {{form.input type="file" labelText="File input"}}
+
+    {{form.input type="month" labelText="Month input"}}
+
+    {{form.input type="number" min="0" max="100" labelText="Number input"}}
+
+    {{form.input type="password" labelText="Password input"}}
+
+    {{form.input type="range" labelText="Range input"}}
+
+    {{form.input type="search" labelText="Search input"}}
+
+    {{form.input type="tel" labelText="Telephone input"}}
+
+    {{form.input type="time" labelText="Time input"}}
+
+    {{form.input type="url" labelText="URL input"}}
+
+    {{form.input type="week" labelText="Week input"}}
+
+    {{form.select labelText="Select dropdown" setOptions='[{"text": "Option 1", "value": 1}, {"text": "Option 2", "value": 2}, {"text": "Option 3", "value": 3}]'}}
+
+    {{form.input type="checkbox" labelText="Single checkbox - lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}}
+
+    {{#form.fieldset legendText="Default checkbox group"}}
+        {{form.input type="checkbox" name="checkboxGroup1" labelText="Checkbox 1"}}
+
+        {{form.input type="checkbox" name="checkboxGroup1" labelText="Checkbox 2"}}
+
+        {{form.input type="checkbox" name="checkboxGroup1" labelText="Checkbox 3"}}
+    {{/form.fieldset}}
+
+    {{#form.fieldset legendText="Vertical checkbox group" isVertical=true}}
+        {{form.input type="checkbox" name="checkboxGroup1" labelText="Checkbox 1"}}
+
+        {{form.input type="checkbox" name="checkboxGroup1" labelText="Checkbox 2"}}
+
+        {{form.input type="checkbox" name="checkboxGroup1" labelText="Checkbox 3"}}
+    {{/form.fieldset}}
+
+    {{#form.fieldset legendText="Default radio group"}}
+        {{form.input type="radio" name="radioGroup1" labelText="Radio 1"}}
+
+        {{form.input type="radio" name="radioGroup1" labelText="Radio 2"}}
+
+        {{form.input type="radio" name="radioGroup1" labelText="Radio 3"}}
+    {{/form.fieldset}}
+
+    {{#form.fieldset legendText="Vertical radio group" isVertical=true}}
+        {{form.input type="radio" name="radioGroup2" labelText="Radio 1"}}
+
+        {{form.input type="radio" name="radioGroup2" labelText="Radio 2"}}
+
+        {{form.input type="radio" name="radioGroup2" labelText="Radio 3"}}
+    {{/form.fieldset}}
+
+    {{form.textarea labelText="Message"}}
+
+    {{form.button buttonText="Submit" type="submit"}}
+{{/ui-form}}

@@ -1,0 +1,36 @@
+<h2>Booking Form</h2>
+
+<p>Please fill in the details below to book a slot.</p>
+
+{{#if onSaveError}}
+    <p>{{onSaveError}}</p>
+{{/if}}
+
+{{#ui-form submit=(action 'onSubmit') as |form|}}
+    {{form.input labelText="First Name" value=model.firstName}}
+    {{form.input labelText="Last Name" value=model.lastName}}
+    {{form.input labelText="Phone" type="tel" value=model.phone}}
+    {{form.input labelText="Email" type="email" value=model.email}}
+    {{form.datepicker labelText="Date" onClose=(action 'setBookingDate')}}
+
+    {{form.button buttonText="Confirm Booking"}}
+{{/ui-form}}
+
+{{#if model}}
+    <h3>Bookings</h3>
+
+    <dl>
+        {{#each model as |booking|}}
+            <dt>First name:</dt>
+            <dd>{{booking.firstName}}</dd>
+            <dt>Last name:</dt>
+            <dd>{{booking.lastName}}</dd>
+            <dt>Phone:</dt>
+            <dd>{{booking.lastName}}</dd>
+            <dt>Email:</dt>
+            <dd>{{booking.email}}</dd>
+            <dt>Date:</dt>
+            <dd>{{booking.displayDate}}</dd>
+        {{/each}}
+    </dl>
+{{/if}}

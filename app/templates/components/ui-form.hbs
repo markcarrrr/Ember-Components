@@ -2,4 +2,11 @@
     <p class="required-text">Please note that required information is marked <abbr title="required" class="icon icon-required">*</abbr></p>
 {{/if}}
 
-{{yield}}
+{{yield (hash
+    fieldset=(component "ui-fieldset")
+    input=(component "ui-input")
+    select=(component "ui-select")
+    textarea=(component "ui-textarea")
+    datepicker=(component "ui-datepicker")
+    button=(component "ui-button")
+)}}

@@ -6,12 +6,8 @@ export default Component.extend({
     classNameBindings: ['isDisabled:disabled', 'isVertical:form-vertical'],
     isDisabled: false,
     isVertical: false,
-    attributeBindings: ['action', 'method', 'autocomplete', 'novalidate'],
-    action: '#',
-    method: 'get',
+    attributeBindings: ['method', 'autocomplete', 'novalidate'],
+    method: 'post',
     autocomplete: 'on',
-    novalidate: 'novalidate',
-    submit(event) {
-        event.preventDefault();
-    }
+    novalidate: 'novalidate'
 });

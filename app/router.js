@@ -10,7 +10,10 @@ Router.map(function() {
   this.route('ui-tabs');
   this.route('ui-blockquote');
   this.route('ui-datepicker');
-  this.route('ui-forms');
+  this.route('ui-forms', function() {
+    this.route('booking-form');
+  });
+  this.route('booking-form');
 });
 
 export default Router;
