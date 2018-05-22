@@ -1,0 +1,23 @@
+.form-input--error + {
+    .error-message {
+        display: block;
+    }
+}
+
+.error-message {
+    background-color: $secondary-1;
+    color: $primary-3;
+    display: none;
+    padding: 10px;
+    position: relative;
+
+    &:after {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid $secondary-1;
+        content: '';
+        left: 10px;
+        position: absolute;
+        top: -10px;
+    }
+}

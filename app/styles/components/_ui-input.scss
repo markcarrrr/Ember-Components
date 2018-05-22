@@ -23,6 +23,10 @@
     &:disabled {
         border-color: $secondary-9;
     }
+
+    &--error {
+        border-color: $secondary-1;
+    }
 }
 
 .label-text {

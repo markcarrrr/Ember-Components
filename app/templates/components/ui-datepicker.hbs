@@ -13,14 +13,14 @@
 
     {{!-- Ember addon, see: https://github.com/shipshapecode/ember-flatpickr --}}
     {{ember-flatpickr
-        allowInput=allowInput
+        allowInput=true
         altFormat=(if altFormat altFormat "F j, Y")
         altInput=setAltInput
         altInputClass="form-input"
         class="form-datepicker"
         clickOpens=setClickOpens
         date=(if date date (readonly null))
-        dateFormat=(if dateFormat dateFormat "Y-m-d")
+        dateFormat="d-m-Y"
         defaultDate=defaultDate
         defaultHour=(if defaultHour defaultHour 12)
         defaultMinute=(if defaultMinute defaultMinute 0)
@@ -39,16 +39,19 @@
         mode=(if mode mode "single")
         nextArrow=(if nextArrow nextArrow ">")
         noCalendar=noCalendar
-        onChange=(if onChange onChange (action (mut dateValues)))
+        onChange=(action "onChange")
         onClose=onClose
         onOpen=onOpen
-        onReady=onReady
+        onReady=(action "onReady")
         parseDate=parseDate
         placeholder=(if placeholder placeholder "Choose a Date")
         prevArrow=(if prevArrow prevArrow "<")
+        required=required
         shorthandCurrentMonth=shorthandCurrentMonth
         static=static
         time_24hr=time_24hr
         weekNumbers=faweekNumberslse
     }}
+
+    <p class="error-message"></p>
 </label>

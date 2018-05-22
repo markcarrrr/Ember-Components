@@ -1,6 +1,9 @@
 export default function() {
     this.namespace = '/api';
 
+    this.get('/users');
+    this.get('/users/:id');
+
     this.get('/ui-tabs');
 
     this.get('/bookings');

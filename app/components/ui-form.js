@@ -9,5 +9,5 @@ export default Component.extend({
     attributeBindings: ['method', 'autocomplete', 'novalidate'],
     method: 'post',
     autocomplete: 'on',
-    novalidate: 'novalidate'
+    novalidate: 'novalidate',
 });

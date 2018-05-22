@@ -19,8 +19,9 @@
         autocomplete=autocomplete
         autofocus=autofocus
         autosave=autosave
-        class="form-input"
+        class="form-input form-clean"
         disabled=disabled
+        focusOut=(action "onBlur")
         form=form
         formaction=formaction
         formenctype=formenctype
@@ -28,6 +29,7 @@
         formnovalidate=formnovalidate
         formtarget=formtarget
         height=height
+        keyUp=(action "onKeyUp")
         inputmode=inputmode
         max=max
         maxlength=maxlength
@@ -47,4 +49,8 @@
         value=value
         width=width
     }}
+
+    <p class="error-message">
+        {{errorMessage}}
+    </p>
 </label>

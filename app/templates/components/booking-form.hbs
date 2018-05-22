@@ -1,0 +1,11 @@
+{{#ui-form required=true submit=(action 'onSubmit') as |form|}}
+    {{form.input labelText="First Name" required=true}}
+    {{!-- {{form.input labelText="First Name" value=model.firstName disabled=(if model.firstName.length true false)}} --}}
+    {{form.input labelText="Last Name" value=model.lastName}}
+    {{!-- {{form.input labelText="Last Name" value=model.lastName disabled=(if model.lastName.length true false)}} --}}
+    {{form.input labelText="Phone" type="tel" value=model.phone disabled=(if model.phone.length true false)}}
+    {{form.input labelText="Email" type="email" value=model.email disabled=(if model.email.length true false)}}
+    {{form.datepicker labelText="Date" onClose=(action 'setBookingDate') required=true}}
+
+    {{form.submitButton buttonText="Confirm Booking"}}
+{{/ui-form}}
