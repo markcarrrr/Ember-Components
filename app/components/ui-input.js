@@ -4,6 +4,7 @@ import { inject as service } from '@ember/service';
 
 export default Component.extend({
     formValidation: service('form-validation'),
+
     classNames: ['input-wrapper', 'form-field'],
 
     classNameBindings: ['typeClass'],

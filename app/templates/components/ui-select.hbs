@@ -1,7 +1,10 @@
 {{!-- 
     Custom options/values:
-        - labelText=string          // Set label text (required).
-        - hideLabel=true            // Accessibly hides the label text.
+        - labelText=string                  // Set label text (required).
+        - hideLabel=true                    // Accessibly hides the label text.
+        - setInitialOption=boolean          // Outputs initial 'prompt' option if set. Set to true by default.
+        - initialOptionText=string          // Text to show for the initial option.
+        - setOptions=array                  // Array of object with keys 'text' and 'value' to output option tags.
 --}}
 <label>
     <span class="label-text {{if hideLabel 'visually-hidden' ''}}">
@@ -12,9 +15,15 @@
         {{/if}}
     </span>
 
-    <select class="form-input">
+    <select class="form-input" onblur={{action "onBlur"}} onchange={{action "onChange"}}>
+        {{#unless setInitialOption}}
+            <option value="0" disabled selected>{{if initialOptionText initialOptionText 'Please select'}}</option>
+        {{/unless}}
+
         {{#each options as |option|}}
             <option value={{option.value}}>{{option.text}}</option>
         {{/each}}
     </select>
+
+    <p class="error-message"></p>
 </label>

@@ -6,23 +6,19 @@
     <p>{{onSaveError}}</p>
 {{/if}}
 
-{{booking-form form=model}}
+{{booking-form user=model}}
 
-{{#if model}}
+{{log model}}
+
+{{#if model.bookings}}
     <h3>Bookings</h3>
 
-    <dl>
-        {{#each model as |booking|}}
-            <dt>First name:</dt>
-            <dd>{{booking.firstName}}</dd>
-            <dt>Last name:</dt>
-            <dd>{{booking.lastName}}</dd>
-            <dt>Phone:</dt>
-            <dd>{{booking.phone}}</dd>
-            <dt>Email:</dt>
-            <dd>{{booking.email}}</dd>
+    {{#each model.bookings as |booking|}}
+        <dl>
+            <dt>Type:</dt>
+            <dd>{{booking.type}}</dd>
             <dt>Date:</dt>
             <dd>{{format-date booking.date}}</dd>
-        {{/each}}
-    </dl>
+        </dl>
+    {{/each}}
 {{/if}}

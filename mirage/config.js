@@ -3,6 +3,7 @@ export default function() {
 
     this.get('/users');
     this.get('/users/:id');
+    this.patch('/users/:id');
 
     this.get('/ui-tabs');
 

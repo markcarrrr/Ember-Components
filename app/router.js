@@ -13,7 +13,6 @@ Router.map(function() {
   this.route('ui-forms', function() {
     this.route('booking-form');
   });
-  this.route('booking-form');
 });
 
 export default Router;

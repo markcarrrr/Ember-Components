@@ -1,10 +1,9 @@
 {{#ui-form required=true submit=(action 'onSubmit') as |form|}}
-    {{form.input labelText="First Name" required=true}}
-    {{!-- {{form.input labelText="First Name" value=model.firstName disabled=(if model.firstName.length true false)}} --}}
-    {{form.input labelText="Last Name" value=model.lastName}}
-    {{!-- {{form.input labelText="Last Name" value=model.lastName disabled=(if model.lastName.length true false)}} --}}
-    {{form.input labelText="Phone" type="tel" value=model.phone disabled=(if model.phone.length true false)}}
-    {{form.input labelText="Email" type="email" value=model.email disabled=(if model.email.length true false)}}
+    {{form.select labelText="Type of booking" value=bookingType setOptions='[{"text": "Booking type 1", "value": "Booking type 1"}, {"text": "Booking type 2", "value": "Booking type 2"}, {"text": "Booking type 3", "value": "Booking type 3"}]' required=true}}
+    {{form.input labelText="First Name" value=user.firstName disabled=(if user.firstName.length true false)}}
+    {{form.input labelText="Last Name" value=user.lastName disabled=(if user.lastName.length true false)}}
+    {{form.input labelText="Phone" type="tel" value=user.mobile disabled=(if user.mobile.length true false)}}
+    {{form.input labelText="Email" type="email" value=user.email disabled=(if user.email.length true false)}}
     {{form.datepicker labelText="Date" onClose=(action 'setBookingDate') required=true}}
 
     {{form.submitButton buttonText="Confirm Booking"}}
